@@ -6,6 +6,7 @@ from google.adk.models.lite_llm import LiteLlm
 
 # https://docs.litellm.ai/docs/providers/openrouter
 model = LiteLlm(
+    # define the provider(openrouter)/model-family(openai/claude etc)/the model(gpt-4.1)
     model="openrouter/openai/gpt-4.1",
     api_key=os.getenv("OPENROUTER_API_KEY"),
 )
