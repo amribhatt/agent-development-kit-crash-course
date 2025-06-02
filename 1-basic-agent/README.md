@@ -28,6 +28,10 @@ parent_folder/
 1. **`__init__.py`**
    - Must import the agent module: `from . import agent`
    - This makes your agent discoverable by ADK
+   
+    If you see from . import agent, it's highly likely that agent is a Python module (agent.py) located in the same directory (which is part of a package) as the file containing this import statement. This agent module would contain some code, likely defining a class, functions, or variables related to the concept of an "agent" within that particular application or library.
+
+For example, if you were working with an "agents" framework (as suggested by some of the search results related to OpenAI's Agents SDK or PydanticAI), the agent module might define the base Agent class that is then used to create specific types of agents.
 
 2. **`agent.py`**
    - Must define a variable named `root_agent`
