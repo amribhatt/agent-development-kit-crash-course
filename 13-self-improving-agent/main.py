@@ -65,38 +65,15 @@ async def simulate_email_flow(email_content: str, sender_email: str, email_write
 async def main():
     print("Starting Email Assistance Demo (Writing Agent uses Gemini 1.5 Flash, env loaded from .env)...")
 
-    email_writer_agent_instance = EmailWritingAgent(name="email_writer", model="gemini-1.5-flash")
+    email_writer_agent_instance = EmailWritingAgent(name="email_writer", model="gemini-2.0-flash")
 
     await simulate_email_flow(
-        email_content="Hi team, could you please provide some information about the upcoming company picnic?",
+        email_content="Hi team, could you please provide some information about the upcoming company event?",
         sender_email="alice@example.com",
         email_writer_agent=email_writer_agent_instance
     )
 
-    await simulate_email_flow(
-        email_content="Hello, I'd like to schedule a meeting with you to discuss the new project proposal. Are you free next week?",
-        sender_email="bob@example.com",
-        email_writer_agent=email_writer_agent_instance
-    )
-
-    await simulate_email_flow(
-        email_content="Limited time offer! Buy now and get rich quick!!! SPAM SPAM SPAM",
-        sender_email="scammer@badsite.com",
-        email_writer_agent=email_writer_agent_instance
-    )
-
-    await simulate_email_flow(
-        email_content="Thanks for the update! Appreciate it.",
-        sender_email="charlie@example.com",
-        email_writer_agent=email_writer_agent_instance
-    )
-
-    await simulate_email_flow(
-        email_content="URGENT: Need your immediate feedback on the attached document. Action required by end of day!",
-        sender_email="manager@example.com",
-        email_writer_agent=email_writer_agent_instance
-    )
-
+    
     print("\nDemo Complete.")
 
 if __name__ == "__main__":

@@ -25,7 +25,7 @@ initial_state = {
 async def main_async():
     # Setup constants
     APP_NAME = "Memory Agent"
-    USER_ID = "aiwithamrita"
+    USER_ID = "amritabhatt"
 
     # ===== PART 3: Session Management - Find or Create =====
     # Check for existing sessions for this user
