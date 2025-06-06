@@ -1,6 +1,7 @@
 """
 Before and After Agent Callbacks Example
 
+
 This example demonstrates how to use both before_agent_callback and after_agent_callback 
 for logging purposes.
 """
